@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+   <listeners>
+        <listener class-name="utils.ExtentTestNGListener"/>
+    </listeners>
+
+    <test name="API Tests">
+        <classes>
+<!--            <class name="com.api.test.LoginAPI"></class>-->
+            <class name="com.api.test.LogoutAPI"></class>
+<!--<class name="com.api.test.SendOTPToMail"></class>-->
+<!--<class name="com.api.test.SendForgetPasswordMail"></class>-->
+<!--            <class name="com.api.test.CreateFormTest"/>-->
+<!--            <class name="com.api.test.GetFormTest"/>-->
+<!--            <class name="com.api.test.PublishedForm"/>-->
+  
+<!--<class name="workFlowAPI.CreateWorkFlow"></class>-->
+<!--<class name="workFlowAPI.GetAllWorkFlow"></class>-->
+<!--<class name="workFlowAPI.GetFormByID"></class>-->
+<!--<class name="workFlowAPI.UpdateWorkFlow"></class>-->
+<!--<class name="com.api.test.GetAllForms"></class>-->
+<!--<class name="com.api.test.GetAllInstituteForm"></class>-->
+<!--<class name="com.api.test.GetAllDropdwonForms"></class>-->
+<!--<class name="com.api.test.GetPublishFormById"></class>-->
+<class name="com.sms.Login.LoginAPI"></class>
+
+
+
+
+
+        </classes>
+    </test>
+</suite> <!-- Suite -->

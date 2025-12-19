@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.ExtentTestNGListener"/>
+  </listeners>
+  <test thread-count="5" name="API Tests(failed)">
+    <classes>
+      <class name="com.sms.Login.LoginAPI">
+        <methods>
+          <include name="verifyloginwithinValidemailAndvalidPassword"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.sms.Login.LoginAPI -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
