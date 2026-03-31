@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 17, 2025 09:37:20 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 10, 2026 10:44:14 am</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyvalidLogout</p>
+            <p class="name">verifyLogoutwithinvalidUserid</p>
             <p class="text-sm">
-              <span>9:37:21 PM</span> / <span>00:00:04:391</span>
+              <span>10:44:15 am</span> / <span>00:00:02:058</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyvalidLogout</h5>
-<span class='badge badge-success'>12.17.2025 9:37:21 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:25 PM</span>
-<span class='badge badge-default'>00:00:04:391</span>
+<h5 class="test-status text-pass">verifyLogoutwithinvalidUserid</h5>
+<span class='badge badge-success'>02.10.2026 10:44:15 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:17 am</span>
+<span class='badge badge-default'>00:00:02:058</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,28 +105,42 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:21 PM</td>
+        <td>10:44:15 am</td>
         <td>
           Request Body: {
-  "userNameId": "35cd3d6d-f0bd-4e27-8a95-237ea715355b"
+  "userNameId": "35cd3d6d-f0bd-4e27-8a95-237ea715355a"
 }
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:25 PM</td>
+        <td>10:44:17 am</td>
         <td>
-          Status Code: 200
+          Message: User not found.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:25 PM</td>
+        <td>10:44:17 am</td>
+        <td>
+          ErrorCode: NotFound
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
+        <td>
+          Status Code: 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
         <td>
           Response Body: {
-    "success": true,
-    "message": "Logout successfully.",
-    "errorCode": null,
+    "success": false,
+    "message": "User not found.",
+    "errorCode": "NotFound",
     "data": null,
     "extraFields": {
         
@@ -135,15 +149,36 @@
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:25 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
         <td>
-          Response Time(ms): 3609
+          Response Time(ms): 1186
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
+        <td>
+          👍 Assertion Passed: Actual 404 is matched with expected 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
+        <td>
+          👍 Assertion Passed: Actual User not found. is matched with expected User not found.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:17 am</td>
+        <td>
+          👍 Assertion Passed: Actual NotFound is matched with expected NotFound
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:25 PM</td>
+        <td>10:44:17 am</td>
         <td>
           Test Passed
         </td>
@@ -158,9 +193,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyloginwithValidemailAndInvalidPassword</p>
+            <p class="name">verifyvalidLogout</p>
             <p class="text-sm">
-              <span>9:37:26 PM</span> / <span>00:00:01:865</span>
+              <span>10:44:17 am</span> / <span>00:00:01:675</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -168,10 +203,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyloginwithValidemailAndInvalidPassword</h5>
-<span class='badge badge-success'>12.17.2025 9:37:26 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:28 PM</span>
-<span class='badge badge-default'>00:00:01:865</span>
+<h5 class="test-status text-pass">verifyvalidLogout</h5>
+<span class='badge badge-success'>02.10.2026 10:44:17 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:18 am</span>
+<span class='badge badge-default'>00:00:01:675</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -184,43 +219,40 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:26 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Request Body: {
-  "userName": "kkdubey@geduservices.com",
-  "password": "Gedu@123"
-}
+          Request Body: 5a7bf488-cd46-45d2-aa05-f06216ca3fce
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Message: Username or password does not exists. Please try again.
+          Message: Logout successfully.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          ErrorCode: BadRequest
+          ErrorCode: null
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Status Code: 400
+          Status Code: 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
           Response Body: {
-    "success": false,
-    "message": "Username or password does not exists. Please try again.",
-    "errorCode": "BadRequest",
+    "success": true,
+    "message": "Logout successfully.",
+    "errorCode": null,
     "data": null,
     "extraFields": {
         
@@ -230,35 +262,35 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Response Time(ms): 1150
+          Response Time(ms): 659
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Assertion Passed: Actual 400 is matched with expected 400
+          👍 Assertion Passed: Actual 200 is matched with expected 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
+          👍 Assertion Passed: Actual Logout successfully. is matched with expected Logout successfully.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
-          Assertion Passed: Actual BadRequest is matched with expected BadRequest
+          👍 Assertion Passed: Actual null is matched with expected null
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:18 am</td>
         <td>
           Test Passed
         </td>
@@ -273,9 +305,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyloginwithinValidemailAndvalidPassword</p>
+            <p class="name">verifyloginwithValidemailAndInvalidPassword</p>
             <p class="text-sm">
-              <span>9:37:28 PM</span> / <span>00:00:01:229</span>
+              <span>10:44:18 am</span> / <span>00:00:00:792</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -283,10 +315,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyloginwithinValidemailAndvalidPassword</h5>
-<span class='badge badge-success'>12.17.2025 9:37:28 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:29 PM</span>
-<span class='badge badge-default'>00:00:01:229</span>
+<h5 class="test-status text-pass">verifyloginwithValidemailAndInvalidPassword</h5>
+<span class='badge badge-success'>02.10.2026 10:44:18 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:19 am</span>
+<span class='badge badge-default'>00:00:00:792</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -299,43 +331,43 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:28 PM</td>
+        <td>10:44:19 am</td>
         <td>
           Request Body: {
-  "userName": "kk@geduserv.com",
-  "password": "Gedu@12345"
+  "userName": "kkdubey@geduservices.com",
+  "password": "Gedu@123"
 }
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
           Message: Username or password does not exists. Please try again.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          ErrorCode: Unauthorized
+          ErrorCode: BadRequest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          Status Code: 401
+          Status Code: 400
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
           Response Body: {
     "success": false,
     "message": "Username or password does not exists. Please try again.",
-    "errorCode": "Unauthorized",
+    "errorCode": "BadRequest",
     "data": null,
     "extraFields": {
         
@@ -345,35 +377,35 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          Response Time(ms): 1181
+          Response Time(ms): 757
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          Assertion Passed: Actual 401 is matched with expected 401
+          👍 Assertion Passed: Actual 400 is matched with expected 400
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
+          👍 Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
-          Assertion Passed: Actual Unauthorized is matched with expected Unauthorized
+          👍 Assertion Passed: Actual BadRequest is matched with expected BadRequest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:19 am</td>
         <td>
           Test Passed
         </td>
@@ -388,9 +420,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyloginwithinValidemailAndinvalidPassword</p>
+            <p class="name">verifyloginwithinValidemailAndvalidPassword</p>
             <p class="text-sm">
-              <span>9:37:29 PM</span> / <span>00:00:01:009</span>
+              <span>10:44:19 am</span> / <span>00:00:00:719</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -398,10 +430,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyloginwithinValidemailAndinvalidPassword</h5>
-<span class='badge badge-success'>12.17.2025 9:37:29 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:30 PM</span>
-<span class='badge badge-default'>00:00:01:009</span>
+<h5 class="test-status text-pass">verifyloginwithinValidemailAndvalidPassword</h5>
+<span class='badge badge-success'>02.10.2026 10:44:19 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:20 am</span>
+<span class='badge badge-default'>00:00:00:719</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -414,38 +446,38 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:29 PM</td>
+        <td>10:44:20 am</td>
         <td>
           Request Body: {
-  "userName": "kk@geduservi.com",
-  "password": "Gedu@123"
+  "userName": "kk@geduserv.com",
+  "password": "Gedu@12345"
 }
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
           Message: Username or password does not exists. Please try again.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
           ErrorCode: Unauthorized
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
           Status Code: 401
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
           Response Body: {
     "success": false,
@@ -460,35 +492,35 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
-          Response Time(ms): 959
+          Response Time(ms): 674
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
-          Assertion Passed: Actual 401 is matched with expected 401
+          👍 Assertion Passed: Actual 401 is matched with expected 401
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
-          Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
+          👍 Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
-          Assertion Passed: Actual Unauthorized is matched with expected Unauthorized
+          👍 Assertion Passed: Actual Unauthorized is matched with expected Unauthorized
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:20 am</td>
         <td>
           Test Passed
         </td>
@@ -503,9 +535,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyloginwithblankemailAndblankPassword</p>
+            <p class="name">verifyloginwithinValidemailAndinvalidPassword</p>
             <p class="text-sm">
-              <span>9:37:30 PM</span> / <span>00:00:01:560</span>
+              <span>10:44:20 am</span> / <span>00:00:00:693</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -513,10 +545,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyloginwithblankemailAndblankPassword</h5>
-<span class='badge badge-success'>12.17.2025 9:37:30 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:31 PM</span>
-<span class='badge badge-default'>00:00:01:560</span>
+<h5 class="test-status text-pass">verifyloginwithinValidemailAndinvalidPassword</h5>
+<span class='badge badge-success'>02.10.2026 10:44:20 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:21 am</span>
+<span class='badge badge-default'>00:00:00:693</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -529,43 +561,43 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:30 PM</td>
+        <td>10:44:21 am</td>
         <td>
           Request Body: {
-  "userName": "",
-  "password": ""
+  "userName": "kk@geduservi.com",
+  "password": "Gedu@123"
 }
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
-          Message: Username or password is required.
+          Message: Username or password does not exists. Please try again.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
-          ErrorCode: BadRequest
+          ErrorCode: Unauthorized
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
-          Status Code: 400
+          Status Code: 401
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
           Response Body: {
     "success": false,
-    "message": "Username or password is required.",
-    "errorCode": "BadRequest",
+    "message": "Username or password does not exists. Please try again.",
+    "errorCode": "Unauthorized",
     "data": null,
     "extraFields": {
         
@@ -575,14 +607,35 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
-          Response Time(ms): 1521
+          Response Time(ms): 652
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:21 am</td>
+        <td>
+          👍 Assertion Passed: Actual 401 is matched with expected 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:21 am</td>
+        <td>
+          👍 Assertion Passed: Actual Username or password does not exists. Please try again. is matched with expected Username or password does not exists. Please try again.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:21 am</td>
+        <td>
+          👍 Assertion Passed: Actual Unauthorized is matched with expected Unauthorized
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:21 am</td>
         <td>
           Test Passed
         </td>
@@ -597,9 +650,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyvalidlogin</p>
+            <p class="name">verifyloginwithblankemailAndblankPassword</p>
             <p class="text-sm">
-              <span>9:37:31 PM</span> / <span>00:00:01:703</span>
+              <span>10:44:21 am</span> / <span>00:00:00:914</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -607,10 +660,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyvalidlogin</h5>
-<span class='badge badge-success'>12.17.2025 9:37:31 PM</span>
-<span class='badge badge-danger'>12.17.2025 9:37:33 PM</span>
-<span class='badge badge-default'>00:00:01:703</span>
+<h5 class="test-status text-pass">verifyloginwithblankemailAndblankPassword</h5>
+<span class='badge badge-success'>02.10.2026 10:44:21 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:22 am</span>
+<span class='badge badge-default'>00:00:00:914</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -623,31 +676,122 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:31 PM</td>
+        <td>10:44:22 am</td>
         <td>
           Request Body: {
-  "userName": "kkdubey@geduservices.com",
-  "password": "Gedu@12345"
+  "userName": "",
+  "password": ""
 }
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
+        <td>
+          Message: Username or password is required.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          ErrorCode: BadRequest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          Status Code: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          Response Body: {
+    "success": false,
+    "message": "Username or password is required.",
+    "errorCode": "BadRequest",
+    "data": null,
+    "extraFields": {
+        
+    }
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          Response Time(ms): 884
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyvalidlogin</p>
+            <p class="text-sm">
+              <span>10:44:22 am</span> / <span>00:00:00:708</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyvalidlogin</h5>
+<span class='badge badge-success'>02.10.2026 10:44:22 am</span>
+<span class='badge badge-danger'>02.10.2026 10:44:22 am</span>
+<span class='badge badge-default'>00:00:00:708</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
+        <td>
+          Request Body: {"userName":"kkdubey@geduservices.com","password":"Gedu@12345"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:44:22 am</td>
         <td>
           Message: Login successfully.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
           Status Code: 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
           Response Body: {
     "success": true,
@@ -655,7 +799,7 @@
     "errorCode": null,
     "data": {
         "message": "Login successfully.",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImtrZHViZXlAZ2VkdXNlcnZpY2VzLmNvbSIsIlVzZXJOYW1lIjoiS2lzaGFuIEt1bWFyIER1YmV5IiwiVXNlckVtYWlsSWQiOiJra2R1YmV5QGdlZHVzZXJ2aWNlcy5jb20iLCJVc2VyTmFtZUlkIjoiMzVjZDNkNmQtZjBiZC00ZTI3LThhOTUtMjM3ZWE3MTUzNTViIiwiSXNTU08iOiIiLCJJbnN0aXR1dGVOYW1lIjoiU3R1ZGVudCBNYW5hZ2VtZW50IFN5c3RlbSIsIlVzZXJQZXJtaXNzaW9ucyI6IiIsIkluc3RpdHV0ZUxvZ28iOiJodHRwczovL3Ntc2Jsb2JzdG9yYWdlYWNjb3VudGRldi5ibG9iLmNvcmUud2luZG93cy5uZXQvc21zZmlsZWNvbnRhaW5lcnFhL2NkNjBhMmViLTQxNWMtNDNhZC04N2Y5LTE1YjYyMGI5ZDIzNC5wbmciLCJVc2VyUm9sZU5hbWUiOiJBcHAgRGV2ZWxvcGVyIiwiVXNlclJvbGVJZCI6IjE4ZDI4NDgyLTc3ODctNGNlZi05NjljLWY2OWJhZTlkOTBkZiIsIkRhdGVGb3JtYXQiOiJNTS9ERC9ZWVlZIiwiVGltZUZvcm1hdCI6Ikg6bW0iLCJTZWxlY3RlZEluc3RpdHV0ZSI6IjYwNDc2YTliLWEzNjQtNGJlYS05YzAyLTVmZDIwN2Q0MWEwYSIsIkFwcExvZ28iOiIiLCJPcmdMb2dvIjoiIiwiSXNPcmdhbml6YXRpb25Vc2VyIjoiZmFsc2UiLCJuYmYiOjE3NjU5ODc2NTMsImV4cCI6MTc2NjU5MjQ1MywiaWF0IjoxNzY1OTg3NjUzfQ.zfV_2P2sD2Xq1mYh-h_tyh52wu3WoakC8s7XaLZdF-Q"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImtrZHViZXlAZ2VkdXNlcnZpY2VzLmNvbSIsIlVzZXJOYW1lIjoiS2lzaGFudmEgS3VtYXIgRHViZXkiLCJVc2VyRW1haWxJZCI6ImtrZHViZXlAZ2VkdXNlcnZpY2VzLmNvbSIsIlVzZXJOYW1lSWQiOiI1YTdiZjQ4OC1jZDQ2LTQ1ZDItYWEwNS1mMDYyMTZjYTNmY2UiLCJJc1NTTyI6IiIsIkluc3RpdHV0ZU5hbWUiOiJQUklTTVMtUUEiLCJVc2VyUGVybWlzc2lvbnMiOiIiLCJJbnN0aXR1dGVMb2dvIjoiaHR0cHM6Ly9zbXNibG9ic3RvcmFnZWFjY291bnRkZXYuYmxvYi5jb3JlLndpbmRvd3MubmV0L3Ntc2ZpbGVjb250YWluZXJxYS81NjY3ZmQ4Ny00ZGFiLTRhMjQtYWVmNy0zYTFkN2ExZjUzZGMuanBnIiwiVXNlclJvbGVOYW1lIjoiQXBwIERldmVsb3BlciIsIlVzZXJSb2xlSWQiOiJhZTU0M2YwYS03MzliLTQyMzUtODdjNS1mNjM3NzJlYjhiYjUiLCJEYXRlRm9ybWF0IjoiTU0vREQvWVlZWSIsIlRpbWVGb3JtYXQiOiJIOm1tIiwiU2VsZWN0ZWRJbnN0aXR1dGUiOiI0NDk2NThiOS0xZTMxLTRhNDItOGUwYi04MmZiNGE4ZTgyNmYiLCJBcHBMb2dvIjoiIiwiT3JnTG9nbyI6Imh0dHBzOi8vc21zYmxvYnN0b3JhZ2VhY2NvdW50ZGV2LmJsb2IuY29yZS53aW5kb3dzLm5ldC9zbXNmaWxlY29udGFpbmVycWEvNTY2N2ZkODctNGRhYi00YTI0LWFlZjctM2ExZDdhMWY1M2RjLmpwZyIsIklzUFBBY2NlcHRlZCI6ImZhbHNlIiwiSXNPcmdhbml6YXRpb25Vc2VyIjoiZmFsc2UiLCJuYmYiOjE3NzA3MDA0NjEsImV4cCI6MTc3MTMwNTI2MSwiaWF0IjoxNzcwNzAwNDYxfQ.QGBuaBtCUAzfr7OecufTapcaxqSvqV2aeVGqhMMka_E"
     },
     "extraFields": {
         
@@ -665,28 +809,28 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
-          Response Time(ms): 1676
+          Response Time(ms): 680
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
-          Assertion Passed: Actual 200 is matched with expected 200
+          👍 Assertion Passed: Actual 200 is matched with expected 200
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
-          Assertion Passed: Actual Login successfully. is matched with expected Login successfully.
+          👍 Assertion Passed: Actual Login successfully. is matched with expected Login successfully.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:37:33 PM</td>
+        <td>10:44:22 am</td>
         <td>
           Test Passed
         </td>
@@ -710,19 +854,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 17, 2025 09:37:20 PM</h3>
+<h3>Feb 10, 2026 10:44:14 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 17, 2025 09:37:33 PM</h3>
+<h3>Feb 10, 2026 10:44:22 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>6</h3>
+<h3>7</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -745,7 +889,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>6</b> tests passed
+<b>7</b> tests passed
 </small>
 </div>
 <div>
@@ -767,10 +911,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='14%'><b>7</b> events passed</small></div>
+<div><small data-tooltip='10%'><b>7</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>43</b> others
+<b data-tooltip='%'>58</b> others
 </small>
 </div>
 </div>
@@ -786,7 +930,7 @@
 </div></div>
 <script>
 var timeline = {
-"verifyvalidLogout":4.391,"verifyloginwithValidemailAndInvalidPassword":1.865,"verifyloginwithinValidemailAndvalidPassword":1.229,"verifyloginwithinValidemailAndinvalidPassword":1.009,"verifyloginwithblankemailAndblankPassword":1.56,"verifyvalidlogin":1.703
+"verifyLogoutwithinvalidUserid":2.058,"verifyvalidLogout":1.675,"verifyloginwithValidemailAndInvalidPassword":0.792,"verifyloginwithinValidemailAndvalidPassword":0.719,"verifyloginwithinValidemailAndinvalidPassword":0.693,"verifyloginwithblankemailAndblankPassword":0.914,"verifyvalidlogin":0.708
 };
 </script>
 <div class="row">
@@ -810,7 +954,7 @@ var timeline = {
 </tr>
 <tr>
 <td>Java Version</td>
-<td>23.0.2</td>
+<td>25.0.1</td>
 </tr>
 <tr>
 <td>Browser</td>
@@ -825,7 +969,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 6,
+passParent: 7,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -846,7 +990,7 @@ passEvents: 7,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 43
+infoEvents: 58
 };
 </script>        </div>
       </div>

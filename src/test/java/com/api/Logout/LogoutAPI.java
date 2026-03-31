@@ -7,27 +7,37 @@ import org.testng.annotations.Test;
 
 import com.api.pojo.LogoutRequest;
 import com.api.test.BaseTest;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.response.Response;
+import utils.APIReusable;
 import utils.ExtentTestNGListener;
 import utils.JsonUtils;
 
 public class LogoutAPI extends BaseTest{
+	
+	APIReusable apir;
+	
 	@Test(priority = 2)
-	public void verifyvalidLogout()
+	public void verifyvalidLogout() throws JsonProcessingException
 	{
+		
+		 apir=	  new APIReusable();
 		
 		// 🔹 Read JSON file → POJO
 	    LogoutRequest logoutRequest = JsonUtils.readJsonToPojo(
 	            "src\\main\\resources\\testData\\logoutRequest.json",
 	            LogoutRequest.class
+	            
 	    );
+	    ObjectMapper mapper=     new ObjectMapper();
+	    String logoutPayload = mapper.writeValueAsString(logoutRequest);
 		
-		
-		
+	    apir.postmethod(token, logoutPayload, "/api/Account/LogOut", 200);
 
 	    ExtentTestNGListener.getTest().info("Request Body: " + logoutRequest.getUserNameId());
-
+	    
 	    Response response = given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", "Bearer " + token)
@@ -39,24 +49,10 @@ public class LogoutAPI extends BaseTest{
 	            .statusCode(200)
 	            .extract().response();
 
-	    //System.out.println("Response: " + response.asString());
-	    response.prettyPrint();
-	    response.then().extract().response();
-
-		// Print complete response
-		//System.out.println(response.asPrettyString());
-		
-		
 		
 		String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
 	  
-
-	    response.prettyPrint();
-	    response.then().extract().response();
-
-		
-
 		
 		ExtentTestNGListener.getTest().info("Message: " + message);
 		ExtentTestNGListener.getTest().info("ErrorCode: " + errorcode);
@@ -66,19 +62,10 @@ public class LogoutAPI extends BaseTest{
 
         ExtentTestNGListener.hardassertwithinteger(response.getStatusCode(), 200);
         ExtentTestNGListener.hardassertwithstring(message, "Logout successfully.");
-        ExtentTestNGListener.hardassertwithstring(errorcode, "null");
-        
-        
-        
-
-		
-		
+        ExtentTestNGListener.hardassertwithstring(errorcode, null);
+      
 }
-        
-
-
-	
-	
+  
 	@Test(priority = 1)
 	public void verifyLogoutwithinvalidUserid()
 	{
@@ -99,16 +86,9 @@ public class LogoutAPI extends BaseTest{
 	            .extract().response();
 
 
-	    response.prettyPrint();
-	    response.then().extract().response();
 
 		String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
-	  
-	    response.prettyPrint();
-	    response.then().extract().response();
-
-		
 
 		
 		ExtentTestNGListener.getTest().info("Message: " + message);

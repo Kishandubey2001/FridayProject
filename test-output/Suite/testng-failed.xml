@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="API Tests(failed)">
     <classes>
-      <class name="com.sms.Login.LoginAPI">
+      <class name="com.api.Logout.LogoutAPI">
         <methods>
-          <include name="verifyloginwithinValidemailAndvalidPassword"/>
           <include name="setup"/>
+          <include name="verifyvalidLogout"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.sms.Login.LoginAPI -->
+      </class> <!-- com.api.Logout.LogoutAPI -->
     </classes>
   </test> <!-- API Tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

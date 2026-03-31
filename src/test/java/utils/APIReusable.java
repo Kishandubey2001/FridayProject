@@ -50,9 +50,26 @@ public class APIReusable {
 	            .when()
 	            .put(apiEndPoint)
 	            .then()
-	            .statusCode(200)
+	            .statusCode(statuscode)
 	            .extract().response();
 		return response;
 	}
-
+    
+	
+	public Response patchmethod(String token,String requestBody,String apiEndPoint,int statuscode)
+	{
+		Response response = given()
+	            .header("Content-Type", "application/json")
+	            .header("Authorization", "Bearer " + token)
+	            .header("origin", "https://qa-sms.geduservices.com")
+	            .body(requestBody)
+	            .when()
+	            .put(apiEndPoint)
+	            .then()
+	            .statusCode(statuscode)
+	            .extract().response();
+		return response;
+	}
+	
+	
 }

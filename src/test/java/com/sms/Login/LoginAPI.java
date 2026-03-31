@@ -2,43 +2,41 @@ package com.sms.Login;
 
 import static io.restassured.RestAssured.given;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.api.pojo.LoginRequest;
+import com.api.pojo.LogoutRequest;
 import com.api.test.BaseTest;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.response.Response;
+import utils.APIReusable;
 import utils.ExtentTestNGListener;
+import utils.JsonUtils;
 
 public class LoginAPI extends BaseTest{
+	APIReusable  apire;
 	
 	@Test(priority = 1)
-	public void verifyloginwithValidemailAndInvalidPassword()
+	public void verifyloginwithValidemailAndInvalidPassword() throws JsonProcessingException
 	{
-	    String requestBody = "{\r\n"
-	    		+ "  \"userName\": \"kkdubey@geduservices.com\",\r\n"
-	    		+ "  \"password\": \"Gedu@123\"\r\n"
-	    		+ "}";
+		
+		 String requestBody = "{\r\n"
+		    		+ "  \"userName\": \"kkdubey@geduservices.com\",\r\n"
+		    		+ "  \"password\": \"Gedu@123\"\r\n"
+		    		+ "}";
+		 
+		  apire=	   new APIReusable();
+		  Response	response=  apire.postmethod(token, requestBody, "/api/Account/Login", 400);
+		
+	   
 	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
 
-	    Response response = given()
-	            .header("Content-Type", "application/json")
-	            .header("Authorization", "Bearer " + token)
-	            .header("origin", "https://qa-sms.geduservices.com")
-	            .body(requestBody)
-	            .when()
-	            .post("/api/Account/Login")
-	            .then()
-	            .statusCode(400)
-	            .extract().response();
+
 	    
 	    String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
-
-
-	    response.prettyPrint();
-	    response.then().extract().response();
-
 
 		
 		ExtentTestNGListener.getTest().info("Message: " + message);
@@ -53,35 +51,22 @@ public class LoginAPI extends BaseTest{
 }
 	
 
-	
-	
 
 	@Test(priority = 2)
 	public void verifyloginwithinValidemailAndvalidPassword()
 	{
-	    String requestBody = "{\r\n"
+		String requestBody = "{\r\n"
 	    		+ "  \"userName\": \"kk@geduserv.com\",\r\n"
 	    		+ "  \"password\": \"Gedu@12345\"\r\n"
 	    		+ "}";
+		Response response=	apire.postmethod(token, requestBody, "/api/Account/Login", 401);
+	    
 	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
 
-	    Response response = given()
-	            .header("Content-Type", "application/json")
-	            .header("Authorization", "Bearer " + token)
-	            .header("origin", "https://qa-sms.geduservices.com")
-	            .body(requestBody)
-	            .when()
-	            .post("/api/Account/Login")
-	            .then()
-	            .statusCode(401)
-	            .extract().response();
+
 	    
 	    String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
-
-
-	    response.prettyPrint();
-	    response.then().extract().response();
 
 
 		
@@ -95,9 +80,7 @@ public class LoginAPI extends BaseTest{
         ExtentTestNGListener.hardassertwithstring(message, "Username or password does not exists. Please try again.");
         ExtentTestNGListener.hardassertwithstring(errorcode, "Unauthorized");
 }
-		
-	
-	
+
 	
 	@Test(priority = 3)
 	public void verifyloginwithinValidemailAndinvalidPassword()
@@ -106,25 +89,14 @@ public class LoginAPI extends BaseTest{
 	    		+ "  \"userName\": \"kk@geduservi.com\",\r\n"
 	    		+ "  \"password\": \"Gedu@123\"\r\n"
 	    		+ "}";
+	    
+	    Response response=    apire.postmethod(token, requestBody, "/api/Account/Login", 401);
 	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
 
-	    Response response = given()
-	            .header("Content-Type", "application/json")
-	            .header("Authorization", "Bearer " + token)
-	            .header("origin", "https://qa-sms.geduservices.com")
-	            .body(requestBody)
-	            .when()
-	            .post("/api/Account/Login")
-	            .then()
-	            .statusCode(401)
-	            .extract().response();
+
 	    
 	    String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
-
-
-	    response.prettyPrint();
-	    response.then().extract().response();
 
 		ExtentTestNGListener.getTest().info("Message: " + message);
 		ExtentTestNGListener.getTest().info("ErrorCode: " + errorcode);
@@ -144,24 +116,11 @@ public class LoginAPI extends BaseTest{
 	    		+ "  \"userName\": \"\",\r\n"
 	    		+ "  \"password\": \"\"\r\n"
 	    		+ "}";
+	    Response response=    apire.postmethod(token, requestBody, "/api/Account/Login", 400);
 	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
 
-	    Response response = given()
-	            .header("Content-Type", "application/json")
-	            .header("Authorization", "Bearer " + token)
-	            .header("origin", "https://qa-sms.geduservices.com")
-	            .body(requestBody)
-	            .when()
-	            .post("/api/Account/Login")
-	            .then()
-	            .statusCode(400)
-	            .extract().response();
-	    
 	    String message = response.jsonPath().getString("message");
 	    String errorcode = response.jsonPath().getString("errorCode");
-	    response.prettyPrint();
-	    response.then().extract().response();
-		System.out.println(response.asPrettyString());
 
 		
 		ExtentTestNGListener.getTest().info("Message: " + message);
@@ -172,29 +131,34 @@ public class LoginAPI extends BaseTest{
 
        
 }
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	@Test(priority = 5)
-	public void verifyvalidlogin()
+	public void verifyvalidlogin() throws JsonProcessingException
 	{
-	    String requestBody = "{\r\n"
-	    		+ "  \"userName\": \"kkdubey@geduservices.com\",\r\n"
-	    		+ "  \"password\": \"Gedu@12345\"\r\n"
-	    		+ "}";
-	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
+		// 🔹 Read JSON file → POJO
+	    LoginRequest loginRequest = JsonUtils.readloginJsonToPojo(
+	            "src\\main\\resources\\testData\\login.json",
+	            LoginRequest.class
+	            
+	    );
+		
+	    ObjectMapper mapper=     new ObjectMapper();
+	    String loginPayload = mapper.writeValueAsString(loginRequest);
+	    
+		
+//		
+//	    String requestBody = "{\r\n"
+//	    		+ "  \"userName\": \"kkdubey@geduservices.com\",\r\n"
+//	    		+ "  \"password\": \"Gedu@12345\"\r\n"
+//	    		+ "}";
+	    ExtentTestNGListener.getTest().info("Request Body: " + loginPayload);
 
 	    Response response = given()
 	            .header("Content-Type", "application/json")
 	            .header("Authorization", "Bearer " + token)
 	            .header("origin", "https://qa-sms.geduservices.com")
-	            .body(requestBody)
+	            .body(loginPayload)
 	            .when()
 	            .post("/api/Account/Login")
 	            .then()
@@ -204,11 +168,6 @@ public class LoginAPI extends BaseTest{
 	    String message = response.jsonPath().getString("message");
 
 
-	    response.prettyPrint();
-	    response.then().extract().response();
-
-
-		
 		ExtentTestNGListener.getTest().info("Message: " + message);
 		ExtentTestNGListener.getTest().info("Status Code: " + response.getStatusCode());
 		ExtentTestNGListener.getTest().info("Response Body: " + response.getBody().asPrettyString());

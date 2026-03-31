@@ -11,7 +11,7 @@ import utils.ExtentTestNGListener;
 public class SendForgetPasswordMail extends BaseTest{
 	
 	@Test(priority = 1)
-	public void verifyvalidlogin()
+	public void verify_send_forgetpassword_mail()
 	{
 	    String requestBody = "{\r\n"
 	    		+ "  \"email\": \"kkdubey@geduservices.com\"\r\n"

@@ -17,7 +17,7 @@ public class ExtentManager {
                     .format(new Date());
 
            // String reportPath = System.getProperty("user.dir") + "/reports/ApiReport.html";
-            ExtentSparkReporter reporter = new ExtentSparkReporter("reports//NewReport_" + date + ".html");
+            ExtentSparkReporter reporter = new ExtentSparkReporter("apiReports//NewReport_" + date + ".html");
             reporter.config().setTheme(Theme.DARK);
             reporter.config().setReportName("API Automation Report");
             reporter.config().setDocumentTitle("API Test Execution");

@@ -13,7 +13,7 @@ public class LogoutAPI extends BaseTest{
 	public void verifyvalidLogout()
 	{
 	    String requestBody = "{\r\n"
-	    		+ "  \"userNameId\": \"35cd3d6d-f0bd-4e27-8a95-237ea715355b\"\r\n"
+	    		+ "    \"UserNameId\": \"5a7bf488-cd46-45d2-aa05-f06216ca3fce\"\r\n"
 	    		+ "}";
 	    ExtentTestNGListener.getTest().info("Request Body: " + requestBody);
 

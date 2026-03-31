@@ -12,5 +12,20 @@ public class JsonUtils {
             throw new RuntimeException("Failed to read JSON file", e);
         }
     }
+	
+	
+	
+	public static <T> T readloginJsonToPojo(String filePath, Class<T> clazz) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readValue(new File(filePath), clazz);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to read JSON file", e);
+        }
+    }
+	
+	
+	
+	
 
 }

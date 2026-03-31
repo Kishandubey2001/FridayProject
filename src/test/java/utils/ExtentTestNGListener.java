@@ -46,25 +46,37 @@ public class ExtentTestNGListener implements ITestListener{
     
     
 
-	public static void hardassertwithstring(String actualvalue,String expectedvalue)
-	{
-		
-		try {
-			
-			Assert.assertEquals(actualvalue, expectedvalue);
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+    public static void hardassertwithstring(String actualvalue, String expectedvalue)
+    {
+        try {
 
-		} catch (AssertionError e) {
-			
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+            Assert.assertEquals(actualvalue, expectedvalue);
+            ExtentTestNGListener.getTest()
+                    .info("👍 Assertion Passed: Actual " + actualvalue +
+                            " is matched with expected " + expectedvalue);
 
-			String exceptionMessage = e.getMessage().substring(0, e.getMessage().indexOf("\n"));
-			ExtentTestNGListener.getTest().fail("Exception occurred: " +exceptionMessage );
+        } catch (AssertionError e) {
 
+            ExtentTestNGListener.getTest()
+                    .info("😒 Assertion Failed: Actual " + actualvalue +
+                            " is not matched with expected " + expectedvalue);
 
-			throw e; 
-		}
-	}
+            String message = e.getMessage();
+
+            String exceptionMessage;
+
+            if (message != null && message.contains("\n")) {
+                exceptionMessage = message.substring(0, message.indexOf("\n"));
+            } else {
+                exceptionMessage = message;   // safe fallback
+            }
+
+            ExtentTestNGListener.getTest()
+                    .fail("Exception occurred: " + exceptionMessage);
+
+            throw e;
+        }
+    }
 	
 	
 	
@@ -74,11 +86,11 @@ public class ExtentTestNGListener implements ITestListener{
 		try {
 			
 			Assert.assertEquals(actualvalue, expectedvalue);
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+			ExtentTestNGListener.getTest().info("👍 Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
 
 		} catch (AssertionError e) {
 			
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+			ExtentTestNGListener.getTest().info("😒 Assertion Failed: Actual "+actualvalue +" is not matched with expected "+expectedvalue+"");
 
 			String exceptionMessage = e.getMessage().substring(0, e.getMessage().indexOf("\n"));
 			ExtentTestNGListener.getTest().fail("Exception occurred: " +exceptionMessage );
@@ -95,11 +107,11 @@ public class ExtentTestNGListener implements ITestListener{
 		try {
 			
 			Assert.assertEquals(actualvalue, expectedvalue);
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+			ExtentTestNGListener.getTest().info("👍 Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
 
 		} catch (AssertionError e) {
 			
-			ExtentTestNGListener.getTest().info("Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
+			ExtentTestNGListener.getTest().info("😒 Assertion Passed: Actual "+actualvalue +" is matched with expected "+expectedvalue+"");
 
 			String exceptionMessage = e.getMessage().substring(0, e.getMessage().indexOf("\n"));
 			ExtentTestNGListener.getTest().fail("Exception occurred: " +exceptionMessage );
@@ -108,13 +120,6 @@ public class ExtentTestNGListener implements ITestListener{
 			throw e; 
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

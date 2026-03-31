@@ -8,12 +8,13 @@
     <test name="API Tests">
         <classes>
 <!--            <class name="com.api.test.LoginAPI"></class>-->
-            <class name="com.api.test.LogoutAPI"></class>
-<!--<class name="com.api.test.SendOTPToMail"></class>-->
-<!--<class name="com.api.test.SendForgetPasswordMail"></class>-->
-<!--            <class name="com.api.test.CreateFormTest"/>-->
-<!--            <class name="com.api.test.GetFormTest"/>-->
-<!--            <class name="com.api.test.PublishedForm"/>-->
+            <class name="com.api.Logout.LogoutAPI"></class>
+            <class name="com.sms.Login.LoginAPI"></class>
+<class name="com.api.test.SendOTPToMail"></class>
+<class name="com.api.test.SendForgetPasswordMail"></class>
+<!--<class name="com.api.test.CreateFormTest"/>-->
+<!--<class name="com.api.test.GetFormTest"/>-->
+<!--<class name="com.api.test.PublishedForm"/>-->
   
 <!--<class name="workFlowAPI.CreateWorkFlow"></class>-->
 <!--<class name="workFlowAPI.GetAllWorkFlow"></class>-->
@@ -23,7 +24,7 @@
 <!--<class name="com.api.test.GetAllInstituteForm"></class>-->
 <!--<class name="com.api.test.GetAllDropdwonForms"></class>-->
 <!--<class name="com.api.test.GetPublishFormById"></class>-->
-<class name="com.sms.Login.LoginAPI"></class>
+
 
 
 
